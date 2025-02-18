@@ -1,18 +1,12 @@
-import { useState } from 'react'
-import './App.css'
-import React from 'react'
+import React from "react";
+import Body from "./components/body";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div>
-      <h1 className='bg-amber-600'>
-        hello world
-
-      </h1>
+      <Body/>
     </div>
   )
-}
+};
 
-export default App
+export default App;
