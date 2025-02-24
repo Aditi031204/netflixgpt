@@ -1,12 +1,16 @@
 import React, { useRef, useState } from "react";
 import { IMG_URL } from "../utils/constant";
-import Header from "./header";
+import Header from "./Header";
 import { checkValidate } from "../utils/validate";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../utils/firebase";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
-  const [errorMessage, setErrorMessage] = useState(null)
+  const [errorMessage, setErrorMessage] = useState(null);
 
+  const navigate = useNavigate();
   const email = useRef(null);
   const password = useRef(null);
 
@@ -17,6 +21,36 @@ const Login = () => {
 
     const message = checkValidate(email.current.value, password.current.value);
     setErrorMessage(message);
+    if (message) return;
+    if(!isSignInForm){
+      //Sign Up logic   
+      createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user);
+          navigate("/browser")
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode +"-" + errorMessage)
+        });
+    }
+    else{
+      //sign in logic
+      signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          console.log(user)
+          navigate("/browser")        
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + "-" + errorMessage)
+        });
+    }
   }
 
   const toggleSignInForm= () => {
@@ -26,8 +60,8 @@ const Login = () => {
     <div>
       <Header/>      
       <div className="absolute bg-black min-h-f min-w-fit z-20 box-border">
-          <img className="z-0" src= {IMG_URL} alt="logo" />
-          <div class="absolute inset-0 bg-black opacity-50"></div>       
+          <img className="z-0 max-w-full" src= {IMG_URL} alt="logo" />
+          <div className="absolute inset-0 bg-black opacity-50"></div>       
       </div>
       <form onSubmit={(e) => e.preventDefault()} className="w-4/12 h-12/12 absolute px-7 py-8 bg-black my-36 z-30 mx-auto right-0 left-0 text-white opacity-80">
         <h1 className="font-bold text-[30px] m-2 ml-6">{isSignInForm ? "Sign In" : "Sign Up"}</h1>

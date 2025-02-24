@@ -6,3 +6,8 @@
 - Routing 
 - Form Validation 
 - UseRef Hook
+- firebase setup
+- Authentication
+- Redux Store for sign in & sign up user
+- Made a complete login page which lead to browser
+- Sign Out button
