@@ -18,6 +18,8 @@
 - Fetched the API
 - Made a store for movies API
 - Build a custom Hook "usenowPlayingMovies" for fetching movies
+- Started building browser page
+- Completed the videocontainer page
 
 # Bug Fix
 - Redirect user to home page if not signed up
