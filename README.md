@@ -20,6 +20,10 @@
 - Build a custom Hook "usenowPlayingMovies" for fetching movies
 - Started building browser page
 - Completed the videocontainer page
+- Fetched the video Api
+- Embedded the youtube video and make it autoplay and mute
+- Build a custom hook "useMovieTrailer"
+- Did some CSS for the background video 
 
 # Bug Fix
 - Redirect user to home page if not signed up
