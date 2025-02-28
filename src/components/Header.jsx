@@ -38,10 +38,10 @@ const Header = () => {
   },[]);
 
   return (
-    <div className="absolute w-50 p-3 z-30 flex gap-237">
+    <div className="fixed w-50 p-3 z-30 flex gap-237">
       <img src={NET_LOGO} alt="netflixlogo"/>
       {user && (<div className="flex gap-4 py-2">
-        <img src="https://i.pinimg.com/736x/5b/50/e7/5b50e75d07c726d36f397f6359098f58.jpg" className="w-[43px] h-fit mt-3 rounded-[5px]" alt="signInlogo"/>
+        <img src="https://i.pinimg.com/736x/5b/50/e7/5b50e75d07c726d36f397f6359098f58.jpg" className="w-[43px] h-fit mt-3" alt="signInlogo"/>
         <button onClick={handleSignOut} className="bg-red-700 rounded-[5px] p-3 py-1 hover:bg-red-600 cursor-pointer text-white font-semibold">Sign Out</button>
       </div>)}
     </div>

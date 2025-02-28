@@ -24,7 +24,30 @@
 - Embedded the youtube video and make it autoplay and mute
 - Build a custom hook "useMovieTrailer"
 - Did some CSS for the background video 
+- Build Movie Lists
+- Fetched the APIs for perticular categories
+- Made them Overlap to the Maincontainer
+- Made cutome hooks for differents APIs 
+- Did some CSS
 
 # Bug Fix
 - Redirect user to home page if not signed up
 - Vice versa for browser page
+
+# Structure
+-   Browser
+        MainContainer
+         - VideoContainer
+         - VideoTitle
+        SecondaryContainer
+         - MoviesList *n
+            - Cards * n
+-   Movie List
+        Movielist- Popular
+           Movie Cards
+        Movielist- New Movies
+        Movielist- Trending
+        Movielist- Horror
+
+# Need to work on
+- When the page starts to scroll down to header background turns black
