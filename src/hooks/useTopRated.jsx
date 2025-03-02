@@ -13,10 +13,6 @@ const useTopRated = async() => {
   // console.log(json.results);
   dispatch(addTopRated(json.results));
   
-  useEffect(()=>{
-      useTopRated();  
-  },[])
-  
 };
 
 export default useTopRated;

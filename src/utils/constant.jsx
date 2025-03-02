@@ -8,3 +8,5 @@ export const options = {
     }
   };
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500/"
+export const SignIn_URL = "https://i.pinimg.com/736x/5b/50/e7/5b50e75d07c726d36f397f6359098f58.jpg"
+export const Language = [{identifier:"en", name:"English"},{identifier:"hindi", name:"Hindi"},{identifier:"spanish", name:"Spanish"},]

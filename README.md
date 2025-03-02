@@ -29,6 +29,10 @@
 - Made them Overlap to the Maincontainer
 - Made cutome hooks for differents APIs 
 - Did some CSS
+- Made a toggle function for GPT 
+- Made two components Search Bar and Movie Suggetion for GPT
+- Made the GPTPage multilingual 
+- Pushed the language data to redux
 
 # Bug Fix
 - Redirect user to home page if not signed up

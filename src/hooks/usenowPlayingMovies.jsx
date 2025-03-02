@@ -13,10 +13,7 @@ const usenowPlayingMovies = async() => {
   // console.log(json.results);
   dispatch(addNowPlayingMovies(json.results));
   
-  useEffect(()=>{
-      usenowPlayingMovies();  
-  },[])
-  
 };
+
 
 export default usenowPlayingMovies;

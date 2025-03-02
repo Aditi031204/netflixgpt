@@ -13,10 +13,6 @@ const usePopularMovies = async() => {
   // console.log(json.results);
   dispatch(addPopularMovies(json.results));
   
-  useEffect(()=>{
-      usePopularMovies();  
-  },[])
-  
 };
 
 export default usePopularMovies;

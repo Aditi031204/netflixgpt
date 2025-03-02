@@ -13,10 +13,6 @@ const useUpcomingMovies = async() => {
   // console.log(json.results);
   dispatch(addUpcomingMovies(json.results));
   
-  useEffect(()=>{
-      useUpcomingMovies();  
-  },[])
-  
 };
 
 export default useUpcomingMovies;
