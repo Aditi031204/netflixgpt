@@ -33,6 +33,7 @@
 - Made two components Search Bar and Movie Suggetion for GPT
 - Made the GPTPage multilingual 
 - Pushed the language data to redux
+- GPT's API fetch
 
 # Bug Fix
 - Redirect user to home page if not signed up
