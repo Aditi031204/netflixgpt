@@ -33,10 +33,14 @@
 - Made two components Search Bar and Movie Suggetion for GPT
 - Made the GPTPage multilingual 
 - Pushed the language data to redux
-- Geminie's API fetch
+- Gemini's API fetch
+- Fetched Gemini recommended movies from TMDB APIs
+- Made up a GPT slice and pushed all the data
+- Reused Movielist Component for CSS 
 - Made up the Recommendation page
 - Learn to make API Keys secure
 - Learn Memoization
+- Made the site Responsive
 
 # Bug Fix
 - Redirect user to home page if not signed up

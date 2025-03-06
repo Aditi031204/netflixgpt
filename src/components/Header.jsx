@@ -50,15 +50,15 @@ const Header = () => {
   }
 
   return (
-    <div className="fixed w-50 p-3 px-8 py-2 z-30 flex gap-179">
-      <img src={NET_LOGO} alt="netflixlogo"/>
+    <div className="fixed w-screen px-8 py-2 z-30 flex flex-col justify-between md:flex-row">
+      <img src={NET_LOGO} alt="netflixlogo" className="w-44 justify-center mx-auto md:mx-0" />
       {user && (<div className="flex gap-4 py-2">
-        {ShowGPTsearch && <select className="text-white p-2 m-2" onChange={handleLanguageChange}>
+        {ShowGPTsearch && <select className="text-white" onChange={handleLanguageChange}>
           {Language.map((lang) => (<option className="bg-black" key={lang.identifier} value={lang.identifier}>{lang.name}</option>))}
         </select>}
-        <button className="bg-pink-700 text-white px-3 py-0.5 m-2 rounded-md cursor-pointer hover:bg-pink-600" onClick={handleGPTsearchClick}>{ShowGPTsearch? "Homepage" : "GPT Search"}</button>
+        <button className="bg-purple-700 text-white px-3 py-0.5 m-2 rounded-md cursor-pointer hover:bg-purple-800" onClick={handleGPTsearchClick}>{ShowGPTsearch? "Homepage" : "GPT Search"}</button>
         <img src={SignIn_URL} className="w-[43px] h-fit mt-3" alt="signInlogo"/>
-        <button onClick={handleSignOut} className="bg-red-700 rounded-[5px] p-3 py-1 hover:bg-red-600 cursor-pointer text-white font-semibold">Sign Out</button>
+        <button onClick={handleSignOut} className="bg-red-700 rounded-[5px] px-2 hover:bg-red-600 cursor-pointer text-white font-semibold">Sign Out</button>
       </div>)}
     </div>
   )
