@@ -14,15 +14,15 @@ const GptSearchBar = () => {
   const searchMoviesTMDB = async (movies) => {
     const data = await fetch("https://api.themoviedb.org/3/search/movie?query="+movies+"&include_adult=false&language=en-US&page=1", options);
     const json = await data.json();
-    const OriginalMovie = json.results.filter((movie) => movie.title === movies);
+    // const OriginalMovie = json.results.filter((movie) => movie.title === movies);
     // console.log(OriginalMovie)
-    return OriginalMovie;
+    return json.results;
   };
 
   const handleGPTsearchClick = async () => {
     console.log(searchText.current.value);
     //Make an API call to get Movie Results
-    const gptQuery = "Act as a movie recomendation system and suggest some movies for the query" + searchText.current.value + ". Only give me names of 5 movies, comma separated like the example given ahead. Example Result: Bhool bhulaiya,Shaadi mai jaroor aana,Koi mill gaya,Kabhi khushi kabhi gum,Andhadhun. Also give the results without any leading space"
+    const gptQuery = "Act as a movie recomendation system and suggest some movies for the query" + searchText.current.value + ". Only give me names of 10 movies, comma separated like the example given ahead. Example Result: Bhool bhulaiya,Shaadi mai jaroor aana,Koi mill gaya,Kabhi khushi kabhi gum,Andhadhun. Also give the results without any leading space"
     const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GENAI_API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     const prompt = searchText.current.value;

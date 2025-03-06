@@ -33,7 +33,10 @@
 - Made two components Search Bar and Movie Suggetion for GPT
 - Made the GPTPage multilingual 
 - Pushed the language data to redux
-- GPT's API fetch
+- Geminie's API fetch
+- Made up the Recommendation page
+- Learn to make API Keys secure
+- Learn Memoization
 
 # Bug Fix
 - Redirect user to home page if not signed up

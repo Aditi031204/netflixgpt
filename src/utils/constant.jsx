@@ -4,7 +4,7 @@ export const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMWEwODQ2MmVkMDQyYjc4OTI0OTQ5NTE2MGIxZTcwNSIsIm5iZiI6MTc0MDQ3ODMyMC4yNjcsInN1YiI6IjY3YmQ5NzcwNTczMzA3MDY3MTJkYjI4YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.KRtPdK3gYzA4b5m0XCOMYLGQtnveWn4wVRwfLx0D0NM'
+      Authorization: 'Bearer ' + import.meta.env.VITE_TMDB_KEY,
     }
   };
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500/"

@@ -1,7 +1,6 @@
 import { options } from "../utils/constant";
 import { useDispatch } from "react-redux";
 import { addPopularMovies } from "../utils/moviesSlice";
-import { useEffect } from "react";
 
 const usePopularMovies = async() => {
   const dispatch = useDispatch()
