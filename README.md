@@ -41,6 +41,10 @@
 - Learn to make API Keys secure
 - Learn Memoization
 - Made the site Responsive
+- Add another feature of brief introduction of the movie
+- Added another component
+- Did some CSS
+- Also made it responsive
 
 # Bug Fix
 - Redirect user to home page if not signed up
@@ -60,6 +64,3 @@
         Movielist- New Movies
         Movielist- Trending
         Movielist- Horror
-
-# Need to work on
-- When the page starts to scroll down to header background turns black

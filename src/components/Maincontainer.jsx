@@ -13,7 +13,7 @@ const Maincontainer = () => {
     const {original_title, overview, id} = mainmovie;
     
   return (
-    <div className='pt-[37%] bg-black md:pt-0'>
+    <div className='pt-[37%] w-full h-full md:pt-0 scrollbar-hide::-webkit-scrollbar scrollbar-hide'>
         <VideoTitle title={original_title} overview={overview}/>
         <VideoBackground movieId ={id}/>
     </div>

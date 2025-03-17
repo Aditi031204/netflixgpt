@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import usenowPlayingMovies from "../hooks/usenowPlayingMovies";
 import Maincontainer from "./Maincontainer";
@@ -8,6 +8,7 @@ import useTopRated from "../hooks/useTopRated";
 import useUpcomingMovies from "../hooks/useUpcomingMovies";
 import GPTsearch from "./GPTsearch";
 import { useSelector } from "react-redux";
+import BrifeMovieCard from "./BriefMovieCard";
 
 const Browser = () => {
   const showGPTSearch = useSelector((store) => store.gpt.ShowGPTsearch)
@@ -18,13 +19,13 @@ const Browser = () => {
   useUpcomingMovies();
   
   return (
-    <div>
+    <div className="no-scrollbar">
       <Header/>
       {showGPTSearch ? (<GPTsearch/>) : (
-        <>
+        <div>
           <Maincontainer/>
           <SecondaryContainer/> 
-        </>
+        </div>
       ) }
     </div>
   )

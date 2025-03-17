@@ -56,11 +56,11 @@ const Login = () => {
   return (
     <div>
       <Header/>      
-      <div className="absolute">
+      <div className="absolute h-full">
           <img className="h-screen object-cover md:w-screen md:h-145.6" src= {IMG_URL} alt="logo" />
           <div className="absolute inset-0 bg-black opacity-50"></div>       
       </div>
-      <form onSubmit={(e) => e.preventDefault()} className="w-12/12 md:w-4/12 md:h-11/12 md:mt-12 h-8/12 absolute px-7 py-8 bg-black my-36 z-30 mx-auto right-0 left-0 text-white opacity-80">
+      <form onSubmit={(e) => e.preventDefault()} className="w-12/12 md:w-4/12 md:h-[94.5%] md:mt-7.5 h-8/12 absolute px-7 py-8 bg-black my-36 z-30 mx-auto right-0 left-0 text-white opacity-80">
         <h1 className="font-bold text-2xl md:text-[30px] m-2 ml-6">{isSignInForm ? "Sign In" : "Sign Up"}</h1>
         <input type="text" placeholder="Email or mobile number" className="my-2 p-4 mt-4 mb-3 ml-6 h-15 border border-gray-400 w-80 rounded-[5px]" ref={email}/>
         <input type="password" placeholder="Password" className="my-2 p-4 mt-1 mb-3 ml-6 h-15 border border-gray-400 w-80 rounded-[5px]" ref={password}/>
