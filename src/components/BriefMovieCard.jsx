@@ -38,7 +38,7 @@ const BrifeMovieCard = ({movieDetail}) => {
       <div className='z-20 bg-gradient-to-r from-black md:h-[79vh] h-[50vh]'>
         <div className='flex-col'>
           <div className='p-2 m-2 ml-1 text-2xl text-white font-bold'>{movieDetail.title}</div>
-          <div className='p-2 m-2 text-lg text-white'>[{movieDetail.release_date}]</div>
+          <div className='mx-3 text-lg text-white font-semibold'>[{movieDetail.release_date}]</div>
         </div>
         <div className='p-2 m-2 ml-1 text-white font-semibold md:w-8/12 w-full'>{movieDetail.overview}</div>
       </div> 

@@ -9,7 +9,7 @@ const GetMovieSuggetion = () => {
   // console.log(MovieNames)
 
   return (
-    <div className="bg-black p-3 mt-5 mx-3 opacity-80">
+    <div className="bg-black p-3 mt-5 mx-3 opacity-85">
       <div>
         {MovieNames.map((MovieNames, index) => (
           <MovieList 
